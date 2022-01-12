@@ -4,7 +4,7 @@ import './menu-item.styles.scss';
 
 const MenuItem = ({title, image, history, size, linkUrl, match}) => {
     return(
-    <div className={`{$size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
+    <div className={`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
 
         <div className='background-image'
         style={{
@@ -21,3 +21,10 @@ const MenuItem = ({title, image, history, size, linkUrl, match}) => {
 }
 
 export default withRouter(MenuItem);
+
+
+
+
+
+
+
