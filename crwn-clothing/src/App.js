@@ -61,7 +61,7 @@ const mapStateToProps = ({user}) => ({
 
 const mapDispatchToProps = dispatch => ({  //settCurrentUser is found in the redu user action and returns a payload of user 
   setCurrentUser: user => dispatch(setCurrentUser(user))   //dispatch gets passed to every reducer
-})
+});
 
 //connecting the app to the outcome of our initial connect call using the second argument of connect 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
