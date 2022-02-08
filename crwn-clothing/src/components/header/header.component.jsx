@@ -31,6 +31,8 @@ const Header = ({currentUser}) => (
     </div>
 );
 
+
+//the state object is the route reducer 
 const mapStateToProps = state => ({
     currentUser: state.user.currentUser
 })
