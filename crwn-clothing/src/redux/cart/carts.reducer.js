@@ -2,7 +2,8 @@
 import CartActionTypes from './cart.types.js';
 
 const INITIAL_STATE = {
-    hidden: true 
+    hidden: true,
+    cartItems: []
 }
 // first make the initial state 
 // second make a fundtion with the state set as initial state and an action
@@ -15,7 +16,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 hidden: !state.hidden
-            }
+            };
+            case CartActionTypes.ADD_ITEM:
+                return{
+                    ...state,
+                    cartItems: [...state.cartItems, action.payload]
+                };
             default:
                 return state;
     }
